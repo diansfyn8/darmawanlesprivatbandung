@@ -1,0 +1,799 @@
+
+/* import fonts from fonts.css file */
+@import url(../css/fonts.css);
+
+/* css variables */
+
+.overlay{   
+    display: block;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    height: 0;
+    width: 0;
+    padding: 10px 10px;
+    text-align: center;
+    overflow: hidden;
+    background-color: rgba(0,0,0,.5);
+}
+.overlay:target{
+     bottom: 0; right: 0;
+     width: auto; height: auto;
+     background-color: rgba(0,0,0,0.7);
+     height: 100%;
+    width: 100%;
+}
+.overlay img{
+    bottom: auto; top: auto;
+    max-height: 80%; max-width: 100%;
+    box-shadow: 2px 2px 7px rgba(0,0,0,0.5);
+}
+.overlay:target img{
+    animation: zoomIn 1s;
+}
+
+@keyframes zoomIn{
+    0% {
+        transform: scale(0); opacity: 0;
+    }
+    100% { 
+        transform: scale(1); opacity: 1;
+    }
+
+}
+
+html{
+     position: relative;
+     width: auto;
+     height: auto;     
+}
+body{
+    margin-bottom: 50px;
+    margin-right: 40px;
+    margin-left: 40px;
+    margin-top: 50px;
+    width: auto;
+    height: auto;
+}
+h2{
+    font-family: 'Bebas Neue', arial, sans-serif;
+    font-size: 100px;
+}
+hr{
+    width: 250px;
+    border-top: 3px solid #999;
+    box-shadow: 3px -7px 10px 0px rgba(112, 203, 255,.3);
+    text-align: center;
+    background-position: center;
+    margin-bottom: 50px; margin-top: 0px;
+    margin-left: auto; margin-right: auto;
+}
+a {
+    color: rgba(173,173,173,1);
+    font-family: 'Bebas Neue', arial, sans-serif;
+    font-size: 24px;
+    text-decoration: none;
+}
+a:hover {
+    color: #4bacff;
+    /*color: #ff00eb;*/
+    text-decoration: none;
+}
+.navbar .navbar-header a{ 
+  color: white;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.4rem;
+  position: relative; 
+  background-color: rgba(0,0,0,0.55);    
+}
+.navbar .navbar-header a:hover {
+   /*border-top: 4px solid #ffae4ad9; */
+   color: #ffae4ad9;
+   padding: 0.8rem 1.2rem;
+   /*overflow: hidden;*/
+}
+.navbar .navbar-header a:active {
+    color: white;
+    /*border-top: 4px solid #e74c3c; */
+}
+
+/* Style the top navigation bar */
+.navbar {   
+    padding:0px 0px;    
+    margin-right: 0px;
+    margin-left: 0px;
+    height: 55px;
+    width: auto;    
+    padding-top: 0px;  
+    background-color: #ffae4ad9;   
+} 
+.navbar .navbar-header:hover{ 
+  /*background-color: #bb98ff;*/
+}
+
+.navbar .navbar-header{    
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 8px;
+    padding-bottom: 0px;  
+    margin-bottom: 0em;
+    margin-top: 0em;
+    margin-left: 0em;
+    margin-right: 0em;
+    width: auto;
+    height: 50px;  
+    display: block;    
+    /*background-color: #bb98ff; */
+} 
+
+
+/* nav-link */
+.navbar-collapse ul{
+   margin-left: 0px;
+   margin-right: 0px;
+}
+.navbar-collapse ul li{
+  background: rgba(255,174,74,0.3);
+  width: auto;
+  width: auto;
+  color: white; 
+  padding: 0.5rem 1.0rem; 
+  margin: 0rem -0.7rem;
+  text-align: -webkit-right; text-align: right;
+}
+.navbar-collapse ul li:hover{
+  /*background: rgba(0,0,0,0.3);*/  
+  font-color: black;
+}
+
+
+/* Togel */
+.navbar-toggler{
+  background: none;
+  border: none;
+  /*padding: 10px 6px;*/ 
+}
+
+.navbar-toggler span{
+    display: block;
+    width: 22px;
+    height: 3px;
+    border: 0.5px;   
+    margin-top: 2px;
+    background: white;    
+}
+.navbar-toggler span + span{
+    margin-top: 5px;
+    width: 18px;
+    height: 2px;
+    border: 0.3px;   
+    background: white;     
+}
+.navbar-toggler span + span + span{
+    margin-top: 5px;
+    width: 22px;
+    height: 3px;
+    border: 0.3px;   
+    background: white;
+}
+
+/*gambar banner */
+.gmb {
+    /*height: 1134px;
+    width: 1398px;*/
+    width: 103vw;
+    height: 45vw;
+    margin-left: -11vw;
+    /* background-image: url('../img/banner/banner.png'); */
+    background-attachment: fixed; 
+    background-size: cover; 
+    background-position: 0vh 0vw;
+    background-repeat: no-repeat;
+    /*margin-left: -100px;*/
+    /* margin-right: 10vw; */ 
+    background-size: cover; 
+}
+p {
+    margin-top: 0;
+    margin-bottom: -1rem;
+}
+
+
+/* beranda */
+.beranda{
+    min-height: 300px;
+    padding-bottom: 10px;
+    margin-top: 50px;
+    transition: 1.5s;
+}
+.par{
+    opacity: 0;
+    transform: translate(-50px, 0);
+}
+.par.parMuncul{
+    opacity: 1;
+    transform: translate(0, 0);
+
+}
+.par .gmb2{
+    /*height: 684px;
+    width: 1400px;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    margin-left: -100px;
+    margin-right: 0px;  */
+    width: 102vw;
+    height: 102vh;
+    margin-left: -11vw;
+    /*background-size: cover; */
+}
+/* portfolio */
+.portfolio{
+    border-top: 3px solid lightblue;
+    box-shadow: 3px -7px 10px 0px rgba(112, 203, 255,.3);
+    margin-bottom: 20px;
+    background-image: linear-gradient(0deg, rgba(255,255,255,1), rgba(112, 203, 255,.1));  
+}
+.portfolio h2, .tatib-tab h2, .lowongan h2{
+    margin-top: 10px;
+}
+.thumbnail img{ 
+    height: 40vh;
+    width: 90vh;    
+    margin: 10px auto;
+    border-radius: 50%;    
+    border: 5px solid #666;
+    display: block;
+    overflow: hidden;
+    transform: : rgb(0,0,0,.5);
+    transition: 1s;
+    color: black;
+    opacity: 0.5;
+}
+.thumbnail img:hover{ 
+    height: 40vh;
+    width: 90vh;    
+    margin: 10px auto;
+    border-radius: 0%;    
+    border: 5px solid #666;
+    display: block;
+    overflow: hidden;
+    transform: rgba(0,0,0,0);
+    opacity: 1;
+}
+.card-text {
+    font-size: 55px;
+}
+
+.kelas-10-11 h1{
+    font-size: 100px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.row>* {   
+    margin-bottom: 10px;
+}
+.col-sm-6{
+    margin-bottom: 10px;
+}
+.portfolio {    
+    min-height: auto;
+}
+.portfolio .card-title{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 23px;
+}
+
+/* tatib */
+.tatib-tab{
+    border-top: 3px solid salmon;
+    box-shadow: 3px -7px 10px 0px rgba(255, 133, 112,.3); 
+    margin-bottom: 25px;
+    background-image: linear-gradient(0deg, rgba(255,255,255,1), rgba(255, 133, 112,.1));  
+}
+.tatib-tab {
+    min-height: auto;
+}
+.tatib-tab .card-title{
+    font-family: 'Bebas Neue', cursive;
+}
+.tatib-tab .card {
+    margin-bottom: 15px;
+}
+.tatib-tab .collapse .card {
+    border-left: 3px solid red;        
+}
+
+/* lowongan */
+.lowongan {    
+    min-height: auto;
+}
+.lowongan {
+    border-top: 3px solid rebeccapurple;  
+    box-shadow: 3px -7px 10px 0px rgba(164, 112, 255,.3); 
+    padding-bottom: 20px;
+    margin-bottom: 10px;   
+    margin-top: 10px;  
+    /*border-bottom: 3px solid rebeccapurple; */
+    background-image: linear-gradient(0deg, rgba(255,255,255,1), rgba(164, 112, 255,.1));
+}  
+.lowongan .col-sm-12 .alert .alert-heading hr {
+    width: 250px;
+    border-top: 3px solid #999;
+    box-shadow: 3px -7px 10px 0px rgba(112, 203, 255,.3);
+    text-align: right;  
+  
+} 
+
+/* footer */
+footer {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    margin-top: 14px;
+    margin-bottom: 0px;
+    background-color: #333;
+    padding-top: 0px;
+    margin-left: -40px
+}
+
+footer p{
+    color: #aaa;
+    font-size: 0.9em;
+    text-align: center;
+    padding-top: 0.9em;
+}
+
+
+/* modal */
+
+.button{
+    background: coral;
+    padding: 0.5vw 4vw;
+    color: #fff;
+    border: 0;
+}
+.button:hover{
+    background: #333;
+
+}
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,.5);
+}
+.modal-content{
+    background-color: #f4f4f4;
+    margin: 20% auto;  
+    padding: 0px; 
+    width: 70%;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2);
+    animation-name: modalopen;
+    animation-duration: 1s:
+}
+.modal-header{
+    margin: 0;
+    background: coral;
+    padding: 15px;
+    color: #fff;
+    text-align: center;
+    display: block;
+}
+
+.modal-body{
+    padding: 10px 20px;
+}
+
+.modal-footer{
+    color: #fff;
+    background: coral;
+    padding: 5px;
+    text-align: center;
+}
+.closeBtn{
+    color: #ccc;
+    float: right;
+    font-size: 30px;
+    color: #fff;
+
+}
+
+.closeBtn:hover, .closeBtn:focus{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* animsai modal */
+@keyframes modalopen{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/* modal1011Fix4s */
+.button1011Fix4s{
+    background: coral;
+    padding: 0.5vw 4vw;
+    color: #fff;
+    border: 0;
+}
+.button1011Fix4s:hover{
+    background: #333;
+
+}
+.modal1011Fix4s{
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,.5);
+}
+.modal-content1011Fix4s{
+    background-color: #f4f4f4;
+    margin: 20% auto;  
+    padding: 0px; 
+    width: 70%;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2);
+    animation-name: modalopen1011Fixs4s;
+    animation-duration: 1s:
+}
+.modal-header1011Fix4s{
+    margin: 0;
+    background: coral;
+    padding: 15px;
+    color: #fff;
+    text-align: center;
+}
+
+.modal-body1011Fix4s{
+    padding: 10px 20px;
+}
+
+.modal-footer1011Fix4s{
+    color: #fff;
+    background: coral;
+    padding: 5px;
+    text-align: left;
+}
+.closeBtn1011Fix4s{
+    color: #ccc;
+    float: right;
+    font-size: 30px;
+    color: #fff;
+    
+}
+
+.closeBtn1011Fix4s:hover, .closeBtn1011Fix4s:focus{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+
+@keyframes modalopen1011Fix4s{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/* modal kelas 10 & 11 Fix 8s/bln */
+/* modal1011Fix4s */
+.button1011Fix8s{
+    background: coral;
+    padding: 0.5vw 4vw;
+    color: #fff;
+    border: 0;
+}
+.button1011Fix8s:hover{
+    background: #333;
+
+}
+.modal1011Fix8s{
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,.5);
+}
+.modal-content1011Fix8s{
+    background-color: #f4f4f4;
+    margin: 20% auto;  
+    padding: 0px; 
+    width: 70%;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2);
+    animation-name: modalopen1011Fixs4s;
+    animation-duration: 1s:
+}
+.modal-header1011Fix8s{
+    margin: 0;
+    background: coral;
+    padding: 15px;
+    color: #fff;
+    text-align: center;
+}
+
+.modal-body1011Fix8s{
+    padding: 10px 20px;
+}
+
+.modal-footer1011Fix8s{
+    color: #fff;
+    background: coral;
+    padding: 5px;
+    text-align: left;
+}
+.closeBtn1011Fix8s{
+    color: #ccc;
+    float: right;
+    font-size: 30px;
+    color: #fff;
+    
+}
+
+.closeBtn1011Fix8s:hover, .closeBtn1011Fix8s:focus{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+
+@keyframes modalopen1011Fix8s{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+
+/* modal 2 kelas 12 fleksibel */
+.button2{
+    background: coral;
+    padding: 0.5vw 4vw;
+    color: #fff;
+    border: 0;
+}
+.button2:hover{
+    background: #333;
+
+}
+.modal2{
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,.5);
+}
+.modal-content2{
+    background-color: #f4f4f4;
+    margin: 20% auto;  
+    padding: 0px; 
+    width: 70%;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2);
+    animation-name: modalopen;
+    animation-duration: 1s:
+}
+.modal-header2{
+    margin: 0;
+    background: coral;
+    padding: 15px;
+    color: #fff;
+    text-align: center;
+}
+
+.modal-body2{
+    padding: 10px 20px;
+}
+
+.modal-footer2{
+    color: #fff;
+    background: coral;
+    padding: 5px;
+    text-align: left;
+}
+.closeBtn2{
+    color: #ccc;
+    float: right;
+    font-size: 30px;
+    color: #fff;
+    
+}
+
+.closeBtn2:hover, .closeBtn2:focus{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+
+@keyframes modalopen2{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/* modal12Fix4s kelas 12 jadwal fix 4 sesi per bulan */
+
+.button12Fix4s{
+    background: coral;
+    padding: 0.5vw 4vw;
+    color: #fff;
+    border: 0;
+}
+.button12Fix4s:hover{
+    background: #333;
+
+}
+.modal12Fix4s{
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,.5);
+}
+.modal-content12Fix4s{
+    background-color: #f4f4f4;
+    margin: 20% auto;  
+    padding: 0px; 
+    width: 70%;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2);
+    animation-name: modalopen12Fix4s;
+    animation-duration: 1s:
+}
+.modal-header12Fix4s{
+    margin: 0;
+    background: coral;
+    padding: 15px;
+    color: #fff;
+    text-align: left;
+}
+
+.modal-body12Fix4s{
+    padding: 10px 20px;
+}
+
+.modal-footer12Fix4s{
+    color: #fff;
+    background: coral;
+    padding: 5px;
+    text-align: left;
+}
+.closeBtn12Fix4s{
+    color: #ccc;
+    float: right;
+    font-size: 30px;
+    color: #fff;
+    
+}
+
+.closeBtn12Fix4s:hover, .closeBtn12Fix4s:focus{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+
+@keyframes modalopen12Fix4s{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+/* modal12Fix4s kelas 12 jadwal fix 8 sesi per bulan */
+
+.button12Fix8s{
+    background: coral;
+    padding: 0.5vw 4vw;
+    color: #fff;
+    border: 0;
+}
+.button12Fix8s:hover{
+    background: #333;
+
+}
+.modal12Fix8s{
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,.5);
+}
+.modal-content12Fix8s{
+    background-color: #f4f4f4;
+    margin: 20% auto;  
+    padding: 0px; 
+    width: 70%;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2);
+    animation-name: modalopen12Fix8s;
+    animation-duration: 1s:
+}
+.modal-header12Fix8s{
+    margin: 0;
+    background: coral;
+    padding: 15px;
+    color: #fff;
+    text-align: left;
+}
+
+.modal-body12Fix8s{
+    padding: 10px 20px;
+}
+
+.modal-footer12Fix8s{
+    color: #fff;
+    background: coral;
+    padding: 5px;
+    text-align: left;
+}
+.closeBtn12Fix8s{
+    color: #ccc;
+    float: right;
+    font-size: 30px;
+    color: #fff;
+    
+}
+
+.closeBtn12Fix8s:hover, .closeBtn12Fix8s:focus{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+
+@keyframes modalopen12Fix8s{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+
+
+

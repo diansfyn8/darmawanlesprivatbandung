@@ -1,0 +1,96 @@
+// modal 2 kelas 12 fleksibel
+
+// get modal element
+var modal2 = document.getElementById('simpleModal2');
+// get open modal button
+var modalBtn2 = document.getElementById('modalBtn2');
+// get close button
+var closeBtn2 = document.getElementsByClassName('closeBtn2')[0];
+
+//listen click
+modalBtn2.addEventListener('click', openModal2);
+
+closeBtn2.addEventListener('click', closeModal2);
+
+window.addEventListener('click', outsideClick2);
+
+// function open modal
+function openModal2(){
+	modal2.style.display = 'block';
+}
+
+function closeModal2(){
+	modal2.style.display = 'none';
+}
+
+function outsideClick2(e){
+	if(e.target == modal2){
+		modal2.style.display = 'none';	
+	}	
+}
+
+
+
+// modal kelas 12Fix4s
+
+// get modal element
+var modal12Fix4s = document.getElementById('simpleModal12Fix4s');
+// get open modal button
+var modalBtn12Fix4s = document.getElementById('modalBtn12Fix4s');
+// get close button
+var closeBtn12Fix4s = document.getElementsByClassName('closeBtn12Fix4s')[0];
+
+//listen click
+modalBtn12Fix4s.addEventListener('click', openModal12Fix4s);
+
+closeBtn12Fix4s.addEventListener('click', closeModal12Fix4s);
+
+window.addEventListener('click', outsideClick12Fix4s);
+
+// function open modal
+function openModal12Fix4s(){
+	modal12Fix4s.style.display = 'block';
+}
+
+function closeModal12Fix4s(){
+	modal12Fix4s.style.display = 'none';
+}
+
+function outsideClick12Fix4s(e){
+	if(e.target == modal12Fix4s){
+		modal12Fix4s.style.display = 'none';	
+	}	
+}
+
+
+
+// modal kelas 12Fix8s
+
+// get modal element
+var modal12Fix8s = document.getElementById('simpleModal12Fix8s');
+// get open modal button
+var modalBtn12Fix8s = document.getElementById('modalBtn12Fix8s');
+// get close button
+var closeBtn12Fix8s = document.getElementsByClassName('closeBtn12Fix8s')[0];
+
+//listen click
+modalBtn12Fix8s.addEventListener('click', openModal12Fix8s);
+
+closeBtn12Fix8s.addEventListener('click', closeModal12Fix8s);
+
+window.addEventListener('click', outsideClick12Fix8s);
+
+// function open modal
+function openModal12Fix8s(){
+	modal12Fix8s.style.display = 'block';
+}
+
+function closeModal12Fix8s(){
+	modal12Fix8s.style.display = 'none';
+}
+
+function outsideClick12Fix8s(e){
+	if(e.target == modal12Fix8s){
+		modal12Fix8s.style.display = 'none';	
+	}	
+}
