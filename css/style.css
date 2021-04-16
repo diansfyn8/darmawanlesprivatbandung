@@ -180,17 +180,14 @@ a:hover {
 
 /*gambar banner */
 .gmb {
-    /*height: 1134px;
-    width: 1398px;*/
-    width: 103vw;
-    height: 45vw;
-    margin-left: -11vw;
+    height: 1134px;
+    width: 1398px;
     /* background-image: url('../img/banner/banner.png'); */
-    background-attachment: fixed; 
+    /* background-attachment: fixed; */
     background-size: cover; 
     background-position: 0vh 0vw;
     background-repeat: no-repeat;
-    /*margin-left: -100px;*/
+    margin-left: -100px;
     /* margin-right: 10vw; */ 
     background-size: cover; 
 }
@@ -217,17 +214,30 @@ p {
 
 }
 .par .gmb2{
-    /*height: 684px;
+    height: 684px;
     width: 1400px;
     background-position: 0px 0px;
     background-repeat: no-repeat;
     margin-left: -100px;
-    margin-right: 0px;  */
-    width: 102vw;
-    height: 102vh;
-    margin-left: -11vw;
+    margin-right: 0px;  
     /*background-size: cover; */
 }
+
+/* PROFIL */
+.profil{
+    min-height: 300px;
+    padding-bottom: 10px;
+    margin-top: 50px;
+    transition: 1.5s;
+}
+.profil p{          
+        font-size: 35px;       
+}
+.profil .pdua{  
+    font-family: 'Bebas Neue', arial, sans-serif;
+    font-size: 75px;
+}
+
 /* portfolio */
 .portfolio{
     border-top: 3px solid lightblue;
